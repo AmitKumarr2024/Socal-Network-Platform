@@ -1,0 +1,19 @@
+{
+  "name": "social-media-api",
+  "version": "1.0.0",
+  "description": "p a social media application with a user friendly interface to register and",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/AmitKumarr2024/socal-network-plateform.git"
+  },
+  "author": "Amit kumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmitKumarr2024/socal-network-plateform/issues"
+  },
+  "homepage": "https://github.com/AmitKumarr2024/socal-network-plateform#readme"
+}
