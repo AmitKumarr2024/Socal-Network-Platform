@@ -1,0 +1,68 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Social Network Api",
+      "description": "A social media application",
+      "version": "0.0.1"
+    },
+    "servers": [{ "url": "http://localhost:3200" }],
+    "components": {
+      "securitySchemes": {
+        "JWT": {
+          "type": "apiKey",
+          "in": "header",
+          "name": "Authorization"
+        }
+      }
+    },
+    "paths": {
+      "/api/user/login": {
+        "post":
+            {
+                "tags": ["Users"],
+                "summary":"Login",
+                "description":"User login to get token",
+                "requestBody":
+                {
+                    "content":
+                    {
+                        "application/json":{
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "email":{
+                                        "type": "string"
+                                    },
+                                    "password":{
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses":{
+                    "200": {
+                        "description":"OK"
+                    },
+                    "400": {
+                        "description": "Incorrect Credentials"
+                    }
+                }
+            }
+      },
+      "/api/user/alluser": {
+        "get": {
+          "tags": ["All user data"],
+          "summary": "All user details available",
+          "description": "Login user can see all user",
+          "security": [{ "JWT": [] }],
+          "responses": {
+            "200": { "description": "Ok" },
+            "401": { "description": "Unauthorized" }
+          }
+        }
+      }
+    }
+  }
+  

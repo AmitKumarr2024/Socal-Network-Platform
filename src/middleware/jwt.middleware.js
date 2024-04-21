@@ -1,21 +1,26 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken';
+const jwtAuth = (req, res, next)=>{
+    // 1. Read the token.
+    const token = req.headers['authorization'];
 
-const jwtAuth = (req, res, next) => {
-  const { jwtToken } = req.cookies;
-  jwt.verify(jwtToken, "kdYYSIzf5qdiJ3iYjjoGeuXQcyrK64xs", (err, decoded) => {
-    if (err) {
-      res
-        .status(401)
-        .json({
-          success: false,
-          msg: "Require Valid details to continue as Login",
-        });
-    } else {
-      const userPayload = decoded;
-      req.userId = userPayload.userId;
-      next();
+    // 2. if no token, return the error.
+    if(!token){
+        return res.status(401).send('Unauthorized');
     }
-  });
+    // 3. check if token is valid.
+    try{
+        const payload = jwt.verify(
+            token,
+            "kdYYSIzf5qdiJ3iYjjoGeuXQcyrK64xs"
+        );
+    } catch(err){
+        // 4. return error.
+        console.log(err);
+        return res.status(401).send('Unauthorized');
+    }
+
+    // 5. call next middleware.
+    next();
 };
 
 export default jwtAuth;

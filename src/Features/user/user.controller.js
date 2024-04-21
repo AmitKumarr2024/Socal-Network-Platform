@@ -6,9 +6,25 @@ export const allUser = (req, res) => {
   const allUser = getAllUsers();
   res.status(201).send(allUser);
 };
+
+
 export const signUpUser = (req, res, next) => {
   const { name, email, password } = req.body;
   
+  // suppose any user try to not give data then this condition activate.
+  const missingFields = [];
+  
+  // Check if any of the required fields are missing
+  if (!name) missingFields.push("Name");
+  if (!email) missingFields.push("Email");
+  if (!password) missingFields.push("Password");
+
+  if (missingFields.length > 0) {
+    return res
+      .status(400)
+      .send({ status: "failure", msg: `Missing ${missingFields.join(", ")} field , required to continue` });
+  }
+
   const newUser = {
     name,
     email,
@@ -18,14 +34,14 @@ export const signUpUser = (req, res, next) => {
 
   if (newUser) {
     let user = signUp(newUser);
-
     return res
       .status(201)
       .send({ status: "success", msg: "user added successfully", user });
+  } else {
+    return res
+      .status(400)
+      .send({ status: "failure", msg: "Invalid User Details" });
   }
-  return res
-    .status(400)
-    .json({ status: "failure", msg: "Invalid User Details" });
 };
 
 // login controller
@@ -42,8 +58,8 @@ export const loginUser = (req, res) => {
       .status(201)
       .cookie("jwtToken", token, { maxAge: 900000, httpOnly: false })
       .cookie("userId", status.id, { maxAge: 900000, httpOnly: false })
-      .json({ status: "success", msg: "User login successfull", token });
+      .send({ status: "success", msg: "User login successfull", token });
   } else {
-    return res.status(400).json({ status: "failure", msg: "No Data exist" });
+    return res.status(400).send({ status: "failure", msg: "No Data exist" });
   }
 };
