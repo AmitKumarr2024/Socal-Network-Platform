@@ -71,3 +71,8 @@
 {"level":"info","message":"Sun Apr 21 2024 15:15:21 GMT+0530 (India Standard Time)\n req URL: /api/posts/users/2/posts\n reqBody: {}","service":"user-service"}
 {"level":"info","message":"Sun Apr 21 2024 15:15:29 GMT+0530 (India Standard Time)\n req URL: /api/posts/users/3/posts\n reqBody: {}","service":"user-service"}
 {"level":"info","message":"Sun Apr 21 2024 15:15:34 GMT+0530 (India Standard Time)\n req URL: /api/posts/users/1/posts\n reqBody: {}","service":"user-service"}
+{"level":"info","message":"Sun Apr 21 2024 15:16:31 GMT+0530 (India Standard Time)\n req URL: /api/posts/posts\n reqBody: {\"title\":\"Amit\",\"content\":\"Amit is good boy\",\"userId\":\"2\"}","service":"user-service"}
+{"level":"info","message":"Sun Apr 21 2024 15:16:54 GMT+0530 (India Standard Time)\n req URL: /api/posts/posts\n reqBody: {\"title\":\"Amit\",\"content\":\"Amit is good boy\",\"userId\":\"2\"}","service":"user-service"}
+{"level":"info","message":"Sun Apr 21 2024 15:17:03 GMT+0530 (India Standard Time)\n req URL: /api/posts/posts\n reqBody: {}","service":"user-service"}
+{"level":"info","message":"Sun Apr 21 2024 15:17:25 GMT+0530 (India Standard Time)\n req URL: /api/posts/posts?\n reqBody: {}","service":"user-service"}
+{"level":"info","message":"Sun Apr 21 2024 15:17:33 GMT+0530 (India Standard Time)\n req URL: /api/posts/users/1/posts\n reqBody: {}","service":"user-service"}
