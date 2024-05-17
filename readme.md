@@ -1,7 +1,7 @@
 # Social Network REST-API Project
 
 ## Description
-a social media application with a user-friendly interface to register and
+A social media application with a user-friendly interface to register and
 authenticate users, create a post, and like and comment on that post.
 
 ## Technology
