@@ -12,7 +12,7 @@ authenticate users, create a post, and like and comment on that post.
 - multer(primarily used for uploading files).
 - Winston(universal logging library)
 
-## Working
+## Feature
 All crud operations with file upload and logs functionality.
 
 ## Project is live
