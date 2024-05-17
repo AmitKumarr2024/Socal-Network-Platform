@@ -17,7 +17,9 @@ A Social Media Application with user-friendly REST API interface That allows use
 - Winston(universal logging library)
 
 ## Feature
-All crud operations with file upload and logs functionality.
+- CRUD operations 
+- The fileUpload system is working.
+- The logs report is operational.
 
 ## Project Status ↓
 [link of swagger](HTTP://localhost:3200/api-docs/)
