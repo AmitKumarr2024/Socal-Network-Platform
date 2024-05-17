@@ -9,7 +9,7 @@ authenticate users, create a post, and like and comment on that post.
 - mongoose
 - jwt( A standardized way to securely send data between two parties)
 - Swagger to display Api Rule
-- multer(primarily used for uploading files).
+- multer(primarily used for uploading files)
 - Winston(universal logging library)
 
 ## Feature
