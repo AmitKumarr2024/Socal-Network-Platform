@@ -5,7 +5,7 @@ a social media application with a user-friendly interface to register and
 authenticate users, create a post, and like and comment on that post.
 
 ## Technology
-- [Express.js]
+- Express.js
 - mongoose
 - jwt( A standardized way to securely send data between two parties)
 - Swagger to display Api Rule
