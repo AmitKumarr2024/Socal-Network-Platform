@@ -19,5 +19,5 @@ A Social Media Application with user-friendly REST API interface That allows use
 ## Feature
 All crud operations with file upload and logs functionality.
 
-## Project is live
+## Project Status ↓
 [link of swagger](HTTP://localhost:3200/api-docs/)
