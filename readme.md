@@ -1,12 +1,12 @@
 # Social Network REST-API Project
 
 ## Description
-A Social Media Application with user-friendly REST API interface 
+A Social Media Application with user-friendly REST API interface That allows users to
 - register
-- Authenticate users
-- Create a post
-- like
-- comment on that post.
+- Authenticate 
+- Create post
+- Like on that post
+- Comment on that post.
 
 ## Technology
 - Express.js
